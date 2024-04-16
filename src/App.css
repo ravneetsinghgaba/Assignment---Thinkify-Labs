@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+h2 {
+  margin: 2%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h4{
+  margin-left: 2%
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-creative-btn {
+  position: absolute;
+  top: 350px; 
+  left: 20px; 
+  font-size: 19px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  border-left-style: solid;
+  border-width: 5px;
+  transition: width 0.3s ease-out;
+  overflow: hidden;
+}
+
+.drawer.open {
+  width: 35%;
+}
+
+.color-boxes {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.color-box {
+  position: relative; 
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0px 5px 5px 5px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.color-box.selected::after {
+  content: '';
+  position: absolute;
+  top: -4px; 
+  left: -4px; 
+  width: 36px; 
+  height: 36px; 
+  border-radius: 50%;
+  border: 2px solid #000000;
+}
+
+.color-box:hover::after {
+  content: ''; 
+}
+
+.preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  border: #000000;
+}
+
+.preview-item {
+  width: calc(30% - 150px); 
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+.preview-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.preview-item p {
+  font-size: 16px;
+  color: #666;
+}
+
+.loading-bar {
+  width: 40%;
+  height: 20px;
+  background-color: #f0f0f0;
+  margin-top: 30px;
+  margin-left: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+span {
+  position: absolute;
+  margin-left: 660px;
+  font-weight: bold;
+}
+
+.progress {
+  height: 100%;
+  background-color: #050505;
+  transition: width 0.8s ease-in-out;
+}
+
+label {
+  margin-left: 50px;
+}
+
+.color-filters {
+  display: flex;
+  margin-left: 30px;
+}
+
+.title-filter input {
+  display: block;
+  margin-left: 30px;
+  width: 400px;
+  padding: 8px 20px;
+}
+
+.drawer input {
+  display: block;
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 400px;
+  padding: 8px 20px;
+}
+
+.drawer h2 {
+  margin: 20px 0px 80px 40px;
+}
+
+.drawer label {
+  font-size: 18px;
+  font-weight: bold;
+} 
+
+.done-btn {
+  position: relative;
+  width: 150px;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 250px 0px 0px 40px;
 }
