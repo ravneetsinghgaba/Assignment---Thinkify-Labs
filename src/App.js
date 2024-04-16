@@ -109,7 +109,7 @@ function App() {
         {creatives.map((creative, index) => (
           <div
             key={index}
-            className={`preview-item ${drawerOpen ? 'drawer-open' : ''}`}
+            className="preview-item"
             style={{ backgroundColor: creative.bgColor }}
           >
             <h3>{creative.title}</h3>
